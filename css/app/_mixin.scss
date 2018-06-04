@@ -1,0 +1,40 @@
+/* Mixins */ 
+/* USE: .box { @include border-radius(10px); } */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($duration) { 
+    -webkit-transition: all $duration ease 0s;
+       -moz-transition: all $duration ease 0s;
+         -o-transition: all $duration ease 0s;
+            transition: all $duration ease 0s;
+}
+
+@mixin transform($x, $y, $z){
+    -webkit-transform: translate3d($x, $y, $z);
+       -moz-transform: translate3d($x, $y, $z);
+         -o-transform: translate3d($x, $y, $z);
+            transform: translate3d($x, $y, $z);
+}
+
+@mixin rotate($r){
+    -ms-transform: rotate($r); /* IE 9 */
+    -webkit-transform: rotate($r); /* Safari */
+    transform: rotate($r);
+}
+
+@mixin scale($s){
+    -ms-transform: scale($s); /* IE 9 */
+    -webkit-transform: scale($s); /* Safari */
+    transform: scale($s);
+}
+
+@mixin skew($deg) { 
+    -ms-transform: skewY($deg);
+    -webkit-transform: skewY($deg); 
+    transform: skewY($deg);
+}
